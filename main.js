@@ -13,8 +13,6 @@ let cactusImg = document.createElement("img");
 cactusImg.src = "img/cactus.png";
 let cloudImg = document.createElement("img");
 cloudImg.src = "img/cloud.webp";
-let runSound = document.createElement("audio");
-runSound.src = "sounds/run-sound.wav";
 
 // Global Variables (Reset)
 let dino;
@@ -236,11 +234,6 @@ function gameOnScreen() {
   ctx.fillText(`Distance: ${Math.round(distance)}m`, 0, cnv.height - 5);
   ctx.textAlign = "right";
   ctx.fillText(`Best: ${Math.round(highScore)}m`, cnv.width, cnv.height - 5);
-
-  // Play Sounds
-  if (jumpStat === "still") {
-    runSound.play();
-  }
 }
 
 // Helper Functions
